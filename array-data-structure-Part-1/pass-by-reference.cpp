@@ -1,6 +1,9 @@
 // Pass-by-reference
 // Example : Doubling the elements of an array
 
+// In call-by-reference, the calling function gets the address of called function instead of a copy of the function
+// so any changes made to the parameter in the called function will affect the original variable in the calling function.
+
 #include<iostream>
 using namespace std;
 
@@ -26,9 +29,9 @@ int main(){
 
     cout << "In Called Function : " << endl;
 
-    changearr(arr, n);
+    changearr(arr, n); // Call the function to double the elements
 
-    cout << "In Main function : " << endl;
+    cout << "In Main function : " << endl; // Display the modified array
 
     for(int i = 0; i < n; i++){
         cout << arr[i] << endl;
@@ -36,3 +39,12 @@ int main(){
 
     return 0;
 }
+
+// Output:
+// Enter the number of elements in the array: 3
+// Enter the elements of the array: 2 3 4
+// In Called Function : 
+// In Main function : 
+// 4
+// 6
+// 8
