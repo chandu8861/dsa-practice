@@ -1,5 +1,6 @@
 // Reverse of an array 
 // Approach : 2 - Pointer approach
+// Time Complexity : O(n)
 
 #include<iostream>
 using namespace std;
@@ -49,3 +50,6 @@ int main(){
 // Enter the elements of the array: 1 2 3 4 5
 // Reversed array: 5 4 3 2 1 
 
+// Enter the size of the array: 6
+// Enter the elements of the array: 12 13 -1 0 4 13
+// Reversed array: 13 4 0 -1 13 12 
