@@ -50,6 +50,8 @@ int main(){
 
     // at function : It is used to get the value at a particular index
     // same as vector_name[index]
-
     cout << vec2.at(1) << endl;
+    // 2
+
+    return 0;
 }
