@@ -47,3 +47,7 @@ int main() {
     return 0;
 
 }
+
+// Enter the number of elements : 7
+// Enter 7 Values : 1 2 3 2 2 2 4        
+// Majority element whose frequency greater than 3 is : 2
