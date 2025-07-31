@@ -29,7 +29,18 @@ int majorityElement(vector<int>& nums){
 
     }
 
-    return ans;
+    int count = 0;
+    for(int val : nums){
+        if(val == ans){
+            count++;
+        }
+    }
+
+    if(count > nums.size()/2){
+        return ans;
+    }else{
+        return -1;
+    }
 
 }
 
