@@ -8,7 +8,11 @@ using namespace std;
 
 double expPow(double x,int n){
 
-    int binForm = n;
+    int binForm = n; // use int64_t 0r long long binForm
+    // We use int64_t (or long long) to safely handle the edge case when n == INT_MIN (-2^31).
+    // Negating INT_MIN causes overflow in 32-bit int because +2^31 is out of range for signed int.
+    // int64_t ensures the negation and all further calculations are safe.
+
     double ans = 1; 
 
     // Corner cases : 
