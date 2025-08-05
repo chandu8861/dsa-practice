@@ -10,7 +10,7 @@ using namespace std;
 int maxProfit(vector<int>& prices){
 
     int maxProfit = 0; 
-    int bestBuy = prices[0]; // best prices to buy stocks;
+    int bestBuy = prices[0];
 
     for(int i = 1; i < prices.size(); i++){
 
