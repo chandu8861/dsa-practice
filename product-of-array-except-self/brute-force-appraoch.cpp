@@ -8,16 +8,16 @@ using namespace std;
 
 vector<int> productExceptSelf(vector<int>& nums) {
 
-    vector<int> answer(nums.size());
+    vector<int> answer(nums.size()); // vector<int> answer(n,1)....(1)
 
     for (int i = 0; i < nums.size(); i++){
         
-        int product = 1;
+        int product = 1;   // no need if we do step (1)
 
         for (int j = 0; j < nums.size(); j++){
 
             if (i != j){
-                product *= nums[j];
+                product *= nums[j]; // ans[i] *= numms[j]
             }
 
         }
