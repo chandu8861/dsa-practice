@@ -8,14 +8,14 @@ using namespace std;
 
 int single_Non_Duplicate(vector<int>& arr){
 
-    int left = 1, right = arr.size()-2;
+    int left = 0, right = arr.size()-1;
 
     while (left <= right){
 
         int mid = left + (right-left)/2;
 
         // Condition to check single number 
-        if (arr[mid-1] != arr[mid] && arr[mid] != arr[mid+1]) return mid;
+        if (arr[mid-1] != arr[mid] && arr[mid] != arr[mid+1]) return arr[mid];
 
         if (mid % 2 == 0){
             // if the mid index is even then both left and right side are even
@@ -60,7 +60,7 @@ int main(){
     // 2
 
     cout << single_Non_Duplicate(arr2) << endl;
-    // 4
+    // 10
 
     return 0;
 }
