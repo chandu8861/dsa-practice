@@ -16,6 +16,10 @@ int main(){
     cout << endl;
     // 1 2 3 4 5 
 
+    // But you cannot access random memory in list :
+    cout << l[2] << endl;
+    // no match for 'operator[]' (operand types are 'std::__cxx11::list<int>' and 'int')
+
     list<int> List;
 
     // push_back() : used to push elements at the end of list.
