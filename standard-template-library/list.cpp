@@ -17,7 +17,7 @@ int main(){
     // 1 2 3 4 5 
 
     // But you cannot access random memory in list :
-    cout << l[2] << endl;
+     // cout << l[2] << endl;
     // no match for 'operator[]' (operand types are 'std::__cxx11::list<int>' and 'int')
 
     list<int> List;
