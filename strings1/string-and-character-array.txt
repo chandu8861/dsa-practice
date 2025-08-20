@@ -1,0 +1,134 @@
+char str[] = {'a','b','c','d','\0'}; 
+['\0' is a null character (ASCII 0). It marks the end of a C-string, 
+but it still occupies 1 byte in memory.]
+
+cout << strlen(str) << endl;
+>> 4
+
+cout << str << endl;
+>> abcd
+
+// In integer array when we print array_name we get address of first element in array.
+int arr[] = {1,2,3,4,5};
+
+
+cout << arr << endl;
+>> 0x16f26f258 (memory address of first element).
+
+char str[] = "hello"; // ['h','e','l','l','o','\0'];
+cout << strlen(str) << endl;
+>> 5
+
+cout << str[4] << endl;
+>> o
+cout << str[5] << endl;
+>>   [null character]
+
+
+char str[100];
+
+cout << "Enter Character array : ";
+cin >> str;
+cout << "Output : " << str << endl;
+
+>> Enter Character array : hello
+>> Output : hello
+
+>> Enter Character array : hello world
+>> Output : hello [whenever the cin encounters space it terminates]
+
+Solution : use cin.getline (str, len, delimiter);
+str -> string/array name
+len -> length of array/string
+delimiter -> character which terminates the string.
+
+cout << "Enter Character array : ";
+cin.getline(str,6);
+cout << "Output : " << str << endl;
+
+>> Enter Character array : Chandu
+>> Output : Chandu
+
+cout << "Enter Character array : ";
+cin.getline(str,100,'.');
+cout << "Output : " << str << endl;
+
+>> Enter Character array : My name is Chandu S.
+>> Output : My name is Chandu S
+
+
+char str[100];
+cout << "Enter Character array : ";
+cin.getline(str,100,'.');
+for (char ch : str){
+    cout << ch << " ";
+}
+cout << endl;
+
+>> Enter Character array : Chandu.
+>> C h a n d u
+
+
+char str[] = "Chandu S";
+int len = 0;
+for (int i = 0; str[i] != '\0'; i++){
+    len++;
+}
+cout << "length of string : " << len << endl;
+
+>> 8
+
+STRINGS in C++ :
+
+Library : #include<string>
+
+//Strings are dynamic in nature (they can resize at runtime).
+string str = "Chandu S"; // string is a class in C++ used to create string objects.
+
+>> Chandu S
+
+str = "apna college";
+cout << str << endl;
+
+>> apna college
+
+
+string s1 = "Chandu";
+string s2 = "Srinivas";
+string s3 = s1 + s2; // Concatenation
+cout << s3 << endl;
+
+>> ChanduSrinivas
+
+cout << (s1 == s2) << endl;
+
+>> 0 [False]
+
+cout << (s1 < s2) << endl;
+
+>> 1 [True]
+
+cout << s1.length() << endl;
+
+>> 6
+
+string str;
+getline(cin, str);
+cout << str << endl;
+
+>> Chandu
+>> Chandu
+
+for (int i = 0; i < str.lenght(); i++){
+    cout << str[i] << " ";
+}
+cout << endl;
+
+>> C h a n d u
+
+for (char ch : str){
+    cout << ch << " ";
+}
+cout << endl;
+
+>> C h a n d u
