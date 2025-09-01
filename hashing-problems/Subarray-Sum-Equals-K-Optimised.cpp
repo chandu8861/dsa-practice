@@ -14,7 +14,8 @@ int subarraySum(vector<int>& nums, int k){
     unordered_map<int, int> m;
     int count = 0;
 
-    for (int i = 0; i < n; i++){
+    prefixSum[0] = nums[0];
+    for (int i = 1; i < n; i++){
         prefixSum[i] = prefixSum[i-1] + nums[i];
     }
 
@@ -62,4 +63,3 @@ int main(){
 
 //     return count;
 // }
-
